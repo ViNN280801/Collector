@@ -44,6 +44,7 @@ from psutil import process_iter as psutil_process_iter
 # Import it conditionally to handle platform differences
 try:
     import psutil
+
     if hasattr(psutil, "cpu_freq"):
         psutil_cpu_freq = psutil.cpu_freq
     else:
