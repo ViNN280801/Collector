@@ -1,0 +1,72 @@
+name: "CodeQL Security Scan"
+
+on:
+    push:
+        branches:
+            - develop
+            - master
+    pull_request:
+        branches:
+            - develop
+            - master
+    schedule:
+        # Run CodeQL analysis every Tuesday at 00:43 UTC
+        - cron: "43 0 * * 2"
+
+jobs:
+    analyze:
+        name: Analyze (${{ matrix.language }})
+        runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+
+        permissions:
+            # Required for all workflows
+            security-events: write
+            # Required to fetch internal or private CodeQL packs
+            packages: read
+            # Only required for workflows in private repositories
+            actions: read
+            contents: read
+
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - language: actions
+                      build-mode: none
+                    - language: python
+                      build-mode: none
+                    # CodeQL supports: 'actions', 'c-cpp', 'csharp', 'go', 'java-kotlin',
+                    # 'javascript-typescript', 'python', 'ruby', 'rust', 'swift'
+                    # This project is Python-only, so we only analyze Python and GitHub Actions workflows
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            # Initialize CodeQL tools for scanning
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@v4
+              with:
+                  languages: ${{ matrix.language }}
+                  build-mode: ${{ matrix.build-mode }}
+                  # Use security-extended and security-and-quality query packs for comprehensive analysis
+                  queries: security-extended,security-and-quality
+                  # For more details on CodeQL query packs, see:
+                  # https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
+
+            # If the analyze step fails with "We were unable to automatically build your code",
+            # set build-mode to "manual" for that language and add build steps here
+            # For Python projects, build-mode: none is typically sufficient
+            - name: Run manual build steps
+              if: matrix.build-mode == 'manual'
+              shell: bash
+              run: |
+                  echo 'If you are using a "manual" build mode, replace this with build commands'
+                  echo 'For Python projects, build-mode: none is usually sufficient'
+                  exit 1
+
+            # Perform CodeQL Analysis
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@v4
+              with:
+                  category: "/language:${{matrix.language}}"

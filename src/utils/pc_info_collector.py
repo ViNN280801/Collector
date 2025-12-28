@@ -31,7 +31,6 @@ from platform import architecture as platform_architecture
 from psutil import Process as psutil_Process
 from psutil import NoSuchProcess as psutil_NoSuchProcess
 from psutil import AccessDenied as psutil_AccessDenied
-from psutil import cpu_freq as psutil_cpu_freq
 from psutil import cpu_count as psutil_cpu_count
 from psutil import cpu_percent as psutil_cpu_percent
 from psutil import virtual_memory as psutil_virtual_memory
@@ -40,6 +39,18 @@ from psutil import disk_partitions as psutil_disk_partitions
 from psutil import net_if_addrs as psutil_net_if_addrs
 from psutil import net_connections as psutil_net_connections
 from psutil import process_iter as psutil_process_iter
+
+# cpu_freq is not available on all platforms (e.g., macOS in some psutil versions)
+# Import it conditionally to handle platform differences
+try:
+    import psutil
+    if hasattr(psutil, "cpu_freq"):
+        psutil_cpu_freq = psutil.cpu_freq
+    else:
+        psutil_cpu_freq = None
+except (ImportError, AttributeError):
+    # Fallback: cpu_freq not available on this platform/psutil version
+    psutil_cpu_freq = None
 
 from subprocess import TimeoutExpired as subprocess_TimeoutExpired
 
@@ -390,13 +401,14 @@ class PCInfoCollector:
             info["logical_cores"] = logical_cores
 
             try:
-                cpu_freq = psutil_cpu_freq()
-                if cpu_freq is not None:
-                    info["max_frequency"] = cpu_freq.max
-                    info["min_frequency"] = cpu_freq.min
-                    info["current_frequency"] = cpu_freq.current
+                if psutil_cpu_freq is not None:
+                    cpu_freq = psutil_cpu_freq()
+                    if cpu_freq is not None:
+                        info["max_frequency"] = cpu_freq.max
+                        info["min_frequency"] = cpu_freq.min
+                        info["current_frequency"] = cpu_freq.current
             except Exception:
-                # CPU frequency not available on all systems
+                # CPU frequency not available on all systems (e.g., macOS, some Linux systems)
                 pass
 
             try:

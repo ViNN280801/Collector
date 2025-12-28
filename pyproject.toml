@@ -166,3 +166,28 @@ module = [
   "jwt.*",
 ]
 ignore_missing_imports = true
+
+[tool.pyright]
+# Pyright configuration for type checking
+pythonVersion = "3.8"
+pythonPlatform = "All"
+typeCheckingMode = "basic"
+
+# Include typing_extensions stubs for Python 3.8 compatibility
+include = ["src"]
+exclude = [
+  "**/__pycache__",
+  "**/node_modules",
+  "**/.venv",
+  "**/venv*",
+  "**/build",
+  "**/dist",
+  "**/*.egg-info",
+]
+
+# Report missing imports from stubs
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+# Allow importing from typing_extensions when typing doesn't have it
+reportMissingModuleSource = false
