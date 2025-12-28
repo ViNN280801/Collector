@@ -1,0 +1,24 @@
+# Popular IDE files
+.vs/
+.vscode/
+.cursor/
+.idea/
+
+# Any Python virtual environment
+*venv*/
+
+# Python cache files
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+
+# Python egg files
+*.egg*/*
+
+# Profiling files
+*.prof
+*performance_results*.json
+*profile_analysis*.json
+
+# Documentation to not to distribute
+docs/not_to_distr/

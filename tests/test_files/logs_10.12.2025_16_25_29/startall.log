@@ -1,0 +1,108 @@
+2025-12-10 16:25:29,523 - DEBUG - [[main]] ROOT_DIR: C:\Lumex\PeakExpertWeb\PeakExpert
+2025-12-10 16:25:29,523 - DEBUG - [[main]] BACKEND_PARENT_DIR: C:\Lumex\PeakExpertWeb\PeakExpertNoGUI
+2025-12-10 16:25:29,524 - INFO - [[main]] Checking if another instance of StartAll.exe is already running
+2025-12-10 16:25:29,734 - DEBUG - [[ProcessManager]] Checking if StartAll.exe process is running: []
+2025-12-10 16:25:29,735 - INFO - [[ProcessManager]] Process StartAll.exe is running: False
+2025-12-10 16:25:29,735 - INFO - [[main]] Everything is fine, no another instance of StartAll.exe is running. Launching the application.
+2025-12-10 16:25:29,735 - INFO - [[StartAll]] Session started with timestamp: 10.12.2025_16_25_29
+2025-12-10 16:25:29,735 - DEBUG - [[StartAll]] Runtime identity logging skipped on Windows platform.
+2025-12-10 16:25:29,735 - INFO - [[StartAll]] Launching Electron browser placeholder before backend/server bootstrap.
+2025-12-10 16:25:29,735 - INFO - [[StartAll]] Starting Electron: 'npm run start_electron' in directory: C:\Lumex\PeakExpertWeb\Interface
+2025-12-10 16:25:29,742 - INFO - [[ProcessManager]] Process 3784 started. Command: npm run start_electron
+2025-12-10 16:25:29,742 - DEBUG - [[ProcessManager]] Process 3784 cwd=C:\Lumex\PeakExpertWeb\Interface
+2025-12-10 16:25:29,742 - INFO - [[StartAll]] Electron browser process spawned; continuing background service startup.
+2025-12-10 16:25:29,743 - DEBUG - [[WindowsRabbitMQRecovery]] Skipping pkill detection on non-Linux platform
+2025-12-10 16:25:29,772 - INFO - [[RabbitMQRecovery]] RabbitMQ is already responding; no recovery needed.
+2025-12-10 16:25:29,776 - INFO - [[COMPortsLogger]] COM ports available before launching services: COM1
+2025-12-10 16:25:29,783 - INFO - [[StartAll]] Interface directory verified: C:\Lumex\PeakExpertWeb\Interface
+2025-12-10 16:25:29,783 - INFO - [[StartAll]] Starting HTTP server: 'npm run server' in directory: C:\Lumex\PeakExpertWeb\Interface
+2025-12-10 16:25:29,792 - INFO - [[ProcessManager]] Process 1204 started. Command: npm run server
+2025-12-10 16:25:29,796 - DEBUG - [[ProcessManager]] Process 1204 cwd=C:\Lumex\PeakExpertWeb\Interface
+2025-12-10 16:25:29,802 - DEBUG - [[StartAll]] Server process context: pid=1204, user=ELUMEX\ChainikovKN, status=running
+2025-12-10 16:25:29,806 - INFO - [[StartAll]] Identified Node.js server PID to track: 6184
+2025-12-10 16:25:29,806 - INFO - [[StartAll]] Waiting for HTTP server readiness at http://localhost:5000 before starting backend.
+2025-12-10 16:25:29,807 - INFO - [[ProcessManager]] Waiting for HTTP server at http://localhost:5000 to become available (timeout: 60s)...
+2025-12-10 16:25:29,810 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-12-10 16:25:30,229 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: > ѕикЁксперт@0.29.12 start_electron
+2025-12-10 16:25:30,229 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: > electron .
+2025-12-10 16:25:30,265 - INFO - [[ProcessManager]] [PID 1204] npm run server: > ѕикЁксперт@0.29.12 server
+2025-12-10 16:25:30,265 - INFO - [[ProcessManager]] [PID 1204] npm run server: > node ./src/server/server.js
+2025-12-10 16:25:30,787 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: starting production mode
+2025-12-10 16:25:30,824 - DEBUG - [[ProcessManager]] HTTP server at http://localhost:5000 not yet available, retrying...
+2025-12-10 16:25:30,832 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: Silent wait 1/3...
+2025-12-10 16:25:31,150 - INFO - [[ProcessManager]] [PID 1204] npm run server: 2025-12-10T16:25:31.146+03:00 [33mwarn[39m: Frontend version: 0.29.12
+2025-12-10 16:25:31,204 - INFO - [[ProcessManager]] [PID 1204] npm run server: 2025-12-10T16:25:31.203+03:00 [33mwarn[39m: Queues deleted
+2025-12-10 16:25:31,206 - INFO - [[ProcessManager]] [PID 1204] npm run server: 2025-12-10T16:25:31.205+03:00 [33mwarn[39m: Connected to RabbitMQ
+2025-12-10 16:25:31,228 - INFO - [[ProcessManager]] [PID 1204] npm run server: 2025-12-10T16:25:31.228+03:00 [33mwarn[39m: Server is running on port 5000
+2025-12-10 16:25:31,329 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-12-10 16:25:31,365 - DEBUG - http://localhost:5000 "HEAD / HTTP/1.1" 200 0
+2025-12-10 16:25:31,365 - INFO - [[ProcessManager]] HTTP server at http://localhost:5000 is available (status 200).
+2025-12-10 16:25:31,366 - INFO - [[StartAll]] HTTP server responded successfully; proceeding with backend launch.
+2025-12-10 16:25:31,371 - INFO - [[ProcessManager]] Process 12656 started. Command: C:\Lumex\PeakExpertWeb\PeakExpertNoGUI\PeakExpertNoGUI
+2025-12-10 16:25:31,372 - DEBUG - [[ProcessManager]] Process 12656 cwd=C:\Lumex\PeakExpertWeb\PeakExpert
+2025-12-10 16:25:31,372 - INFO - [[StartAll]] Backend process spawned with PID 12656.
+2025-12-10 16:25:31,372 - DEBUG - [[StartAll]] Backend working directory set to C:\Lumex\PeakExpertWeb\PeakExpertNoGUI.
+2025-12-10 16:25:31,380 - DEBUG - [[StartAll]] Backend process context: user=ELUMEX\ChainikovKN, status=running, uids=None, gids=None
+2025-12-10 16:25:31,381 - DEBUG - [[COMPortsLogger]] Waiting 3 seconds before logging COM ports for stage: after launching all processes
+2025-12-10 16:25:31,381 - INFO - [[StartAll]] All the processes started. Browser window stays open while services warm up.
+2025-12-10 16:25:32,362 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: Server ready after 2 total attempt(s)
+2025-12-10 16:25:32,565 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: starting production mode
+2025-12-10 16:25:33,213 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getTemplatesList for main_reqv
+2025-12-10 16:25:33,330 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getTemplatesList, and main_reqv
+2025-12-10 16:25:33,419 - INFO - [[ProcessManager]] [PID 1204] npm run server: 2025-12-10T16:25:33.418+03:00 [33mwarn[39m: Backend version: 0.35.00
+2025-12-10 16:25:33,432 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getAutosamplerProperties for autosampler_reqv
+2025-12-10 16:25:33,434 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getTemplatesList for main_reqv
+2025-12-10 16:25:33,437 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getAutosamplerProperties, and autosampler_reqv
+2025-12-10 16:25:33,541 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getTemplatesList, and main_reqv
+2025-12-10 16:25:33,564 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-10 16:25:33,672 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getTemplateByName, and main_reqv
+2025-12-10 16:25:34,393 - INFO - [[COMPortsLogger]] COM ports available after launching all processes: COM1
+2025-12-10 16:25:36,382 - DEBUG - [[StartAll]] Backend process 12656 healthy after 5.0s.
+2025-12-10 16:25:43,324 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor openFiles for 240822-1401_10 нг_мл.mdfx_523d3bc35f76b6c3bee5e7101194a02ef691976549bb69518eb0dc4e070480f1_reqv
+2025-12-10 16:25:43,324 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor openFiles for 240822-1429_20 нг_мл.mdfx_724bce20700407c7fb1cbfe0dcb16b1d9f8a510fe0bca3fed32c820674f9fb40_reqv
+2025-12-10 16:25:43,650 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for openFiles, and 240822-1401_10 нг_мл.mdfx_523d3bc35f76b6c3bee5e7101194a02ef691976549bb69518eb0dc4e070480f1_reqv
+2025-12-10 16:25:43,820 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for openFiles, and 240822-1429_20 нг_мл.mdfx_724bce20700407c7fb1cbfe0dcb16b1d9f8a510fe0bca3fed32c820674f9fb40_reqv
+2025-12-10 16:25:43,941 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-10 16:25:44,065 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getTemplateByName, and main_reqv
+2025-12-10 16:25:44,142 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-10 16:25:44,262 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for getTemplateByName, and main_reqv
+2025-12-10 16:26:07,125 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor addCalibration for 240822-1401_10 нг_мл.mdfx_523d3bc35f76b6c3bee5e7101194a02ef691976549bb69518eb0dc4e070480f1_reqv
+2025-12-10 16:26:07,127 - INFO - [[ProcessManager]] [PID 1204] npm run server: empty resolver map, stopping consumer that was started for addCalibration, and 240822-1401_10 нг_мл.mdfx_523d3bc35f76b6c3bee5e7101194a02ef691976549bb69518eb0dc4e070480f1_reqv
+2025-12-10 16:26:07,152 - INFO - [[ProcessManager]] [PID 1204] npm run server: pushedResolverFor selectCalibration for 240822-1401_10 нг_мл.mdfx_523d3bc35f76b6c3bee5e7101194a02ef691976549bb69518eb0dc4e070480f1_reqv
+2025-12-10 16:26:19,953 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: got closing
+2025-12-10 16:26:19,964 - INFO - [[ProcessManager]] [PID 3784] npm run start_electron: closed
+2025-12-10 16:26:20,087 - INFO - [[StartAll]] Electron browser process signaled exit; initiating shutdown sequence.
+2025-12-10 16:26:20,087 - INFO - [[StartAll]] Electron browser exited.
+2025-12-10 16:26:20,087 - INFO - [[StartAll]] Starting shutdown sequence for all managed processes.
+2025-12-10 16:26:20,087 - INFO - [[StartAll]] Terminating process tree (PID: 3784). Name: electron_browser
+2025-12-10 16:26:20,090 - INFO - [[ProcessManager]] Parent process 3784 not found.
+2025-12-10 16:26:20,090 - INFO - [[StartAll]] Terminating process tree (PID: 1204). Name: server_shell
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] Terminating process tree for PID 1204:
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] - conhost.exe (PID: 12816)
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] - node.exe (PID: 9836)
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] - cmd.exe (PID: 10264)
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] - node.exe (PID: 12000)
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] - cmd.exe (PID: 1204)
+2025-12-10 16:26:20,094 - INFO - [[ProcessManager]] Terminating PID 12816 using terminate (SIGTERM) signal (forceful fallback).
+2025-12-10 16:26:20,102 - INFO - [[ProcessManager]] Successfully terminated PID 12816 after terminate (SIGTERM) signal.
+2025-12-10 16:26:20,102 - INFO - [[ProcessManager]] Process PID=12816 successfully terminated
+2025-12-10 16:26:20,103 - INFO - [[ProcessManager]] Terminating PID 9836 using terminate (SIGTERM) signal (forceful fallback).
+2025-12-10 16:26:20,108 - INFO - [[ProcessManager]] Successfully terminated PID 9836 after terminate (SIGTERM) signal.
+2025-12-10 16:26:20,109 - INFO - [[ProcessManager]] Process PID=9836 successfully terminated
+2025-12-10 16:26:20,111 - INFO - [[ProcessManager]] Terminating PID 12000 using terminate (SIGTERM) signal (forceful fallback).
+2025-12-10 16:26:20,122 - INFO - [[ProcessManager]] Successfully terminated PID 12000 after terminate (SIGTERM) signal.
+2025-12-10 16:26:20,122 - INFO - [[ProcessManager]] Process PID=12000 successfully terminated
+2025-12-10 16:26:20,133 - INFO - [[ProcessManager]] Process tree for PID 1204 terminated in 0.04 seconds.
+2025-12-10 16:26:20,133 - INFO - [[StartAll]] Terminating process tree (PID: 12656). Name: backend
+2025-12-10 16:26:20,137 - INFO - [[ProcessManager]] Terminating process tree for PID 12656:
+2025-12-10 16:26:20,137 - INFO - [[ProcessManager]] - conhost.exe (PID: 12016)
+2025-12-10 16:26:20,137 - INFO - [[ProcessManager]] - PeakExpertNoGUI.exe (PID: 12656)
+2025-12-10 16:26:20,137 - INFO - [[ProcessManager]] Terminating PID 12016 using terminate (SIGTERM) signal (forceful fallback).
+2025-12-10 16:26:20,146 - INFO - [[ProcessManager]] Successfully terminated PID 12016 after terminate (SIGTERM) signal.
+2025-12-10 16:26:20,146 - INFO - [[ProcessManager]] Process PID=12016 successfully terminated
+2025-12-10 16:26:20,147 - INFO - [[ProcessManager]] Attempting graceful termination for PID 12656 using file-based signal.
+2025-12-10 16:26:20,147 - INFO - [[ProcessManager]] Created shutdown file: .\nogui-12656.ipc.txt for PID 12656.
+2025-12-10 16:26:23,559 - INFO - [[ProcessManager]] Successfully terminated PID 12656 after graceful shutdown command. It means that all the dtors were called and all the resources were released.
+2025-12-10 16:26:23,559 - INFO - [[ProcessManager]] Process tree for PID 12656 terminated in 3.43 seconds.
+2025-12-10 16:26:23,559 - INFO - [[StartAll]] StartAll.py finished
+2025-12-10 16:26:23,559 - INFO - [[main]] Starting log collection on shutdown...

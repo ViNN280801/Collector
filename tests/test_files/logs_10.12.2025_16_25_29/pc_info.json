@@ -1,0 +1,134 @@
+{
+  "collection_timestamp": "2025-12-10T16:26:23.670234",
+  "os": {
+    "system": "Windows",
+    "platform": "Windows-10-10.0.19044-SP0",
+    "release": "10",
+    "version": "10.0.19044",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 165 Stepping 3, GenuineIntel",
+    "architecture": "64bit",
+    "build_number": "19044",
+    "build_string": "19041.1.amd64fre.vb_release.191206-1406",
+    "display_version": "21H2",
+    "edition": "Professional",
+    "product_name": "Windows 10 Pro"
+  },
+  "cpu": {
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "max_frequency": 4104.0,
+    "min_frequency": 0.0,
+    "current_frequency": 4104.0,
+    "architecture": "AMD64",
+    "cpu_percent": 3.8,
+    "model": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+  },
+  "ram": {
+    "total": 8411025408,
+    "available": 3540357120,
+    "used": 4870668288,
+    "percent": 57.9
+  },
+  "disks": [
+    {
+      "device": "C:\\",
+      "mountpoint": "C:\\",
+      "fstype": "NTFS",
+      "total": 107306020864,
+      "used": 91110887424,
+      "free": 16195133440,
+      "percent": 84.9
+    },
+    {
+      "device": "D:\\",
+      "mountpoint": "D:\\",
+      "fstype": "NTFS",
+      "total": 142107209728,
+      "used": 11954237440,
+      "free": 130152972288,
+      "percent": 8.4
+    },
+    {
+      "device": "E:\\",
+      "mountpoint": "E:\\",
+      "fstype": "FAT32",
+      "total": 7795179520,
+      "used": 3975749632,
+      "free": 3819429888,
+      "percent": 51.0
+    }
+  ],
+  "environment": {
+    "PATH": "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Lumex\\PeakExpertWeb\\erlang\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\mingw64\\bin\\;C:\\Program Files\\GitExtensions\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Git\\cmd;C:\\Lumex\\PeakExpertWeb\\nodejs\\;C:\\Users\\USER\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\USER\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\USER\\AppData\\Local\\Programs\\Git\\cmd;D:\\allure-2.35.1\\bin",
+    "TEMP": "C:\\Users\\CHAINI~1\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\CHAINI~1\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\USER",
+    "APPDATA": "C:\\Users\\USER\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\USER\\AppData\\Local",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PROGRAMFILES(X86)": "C:\\Program Files (x86)",
+    "SYSTEMROOT": "C:\\Windows",
+    "WINDIR": "C:\\Windows",
+    "COMPUTERNAME": "ASDJNIAIKP",
+    "USERNAME": "USER"
+  },
+  "python": {
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  24 2021, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "version_info": [
+      3,
+      12,
+      10,
+      "final",
+      0
+    ],
+    "executable": "C:\\Lumex\\PeakExpertWeb\\PeakExpert\\StartAll.exe",
+    "platform": "win32"
+  },
+  "processes": [
+    {
+      "pid": 3392,
+      "name": "erlsrv.exe",
+      "cmdline": [],
+      "status": "running",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 3244032,
+        "vms": 778240
+      },
+      "memory_percent": 0.0385688051413386,
+      "create_time": "2025-12-03T16:22:20.024208",
+      "username": null
+    },
+    {
+      "pid": 4064,
+      "name": "erl.exe",
+      "cmdline": [],
+      "status": "running",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 58511360,
+        "vms": 120623104
+      },
+      "memory_percent": 0.6956507341464923,
+      "create_time": "2025-12-03T16:22:20.216939",
+      "username": null
+    },
+    {
+      "pid": 5332,
+      "name": "StartAll.exe",
+      "cmdline": [
+        "C:\\Lumex\\PeakExpertWeb\\PeakExpert\\StartAll.exe"
+      ],
+      "status": "running",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 42029056,
+        "vms": 27025408
+      },
+      "memory_percent": 0.4996900373172669,
+      "create_time": "2025-12-10T16:25:29.007046",
+      "username": "ELUMEX\\USER"
+    }
+  ]
+}

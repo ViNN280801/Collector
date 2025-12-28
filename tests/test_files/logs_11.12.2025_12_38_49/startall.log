@@ -1,0 +1,144 @@
+2025-12-11 12:38:49,175 - DEBUG - [[main]] ROOT_DIR: /home/user/.peakexpertweb/PeakExpert
+2025-12-11 12:38:49,175 - DEBUG - [[main]] BACKEND_PARENT_DIR: /home/user/.peakexpertweb/PeakExpertNoGUI
+2025-12-11 12:38:49,175 - INFO - [[main]] Checking if another instance of StartAll is already running
+2025-12-11 12:38:49,182 - DEBUG - [[ProcessManager]] Checking if StartAll process is running: []
+2025-12-11 12:38:49,182 - INFO - [[ProcessManager]] Process StartAll is running: False
+2025-12-11 12:38:49,182 - INFO - [[main]] Everything is fine, no another instance of StartAll is running. Launching the application.
+2025-12-11 12:38:49,182 - INFO - [[StartAll]] Session started with timestamp: 11.12.2025_12_38_49
+2025-12-11 12:38:49,183 - INFO - [[StartAll]] Process identity: uid=1000(user), euid=1000(user), gid=1000(user), egid=1000(user)
+2025-12-11 12:38:49,183 - INFO - [[StartAll]] Supplementary groups: 24(cdrom), 25(floppy), 29(audio), 30(dip), 44(video), 46(plugdev), 109(netdev), 112(lpadmin), 113(scanner), 333(astra-console), 1000(user), 1001(astra-admin), 1002(peakexpert)
+2025-12-11 12:38:49,183 - DEBUG - [[StartAll]] Environment snapshot: USER=user, LOGNAME=user, HOME=/home/user, SHELL=/bin/bash, PKEXEC_UID=<unset>, XDG_RUNTIME_DIR=/run/user/1000, DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-cKm8RXFUQM,guid=b0f9bea5d78076a825b8d2bc693a8ed9, PATH=/home/user/.peakexpertweb/Interface/node_modules/electron/dist/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games, LD_LIBRARY_PATH=/home/user/.peakexpertweb/PeakExpert:/home/user/.peakexpertweb/PeakExpert/../PeakExpertNoGUI:, DISPLAY=:0
+2025-12-11 12:38:49,183 - DEBUG - [[StartAll]] Resource limits: core=(0, -1), nofile=(1024, 1048576)
+2025-12-11 12:38:49,189 - DEBUG - [[StartAll]] No stale server processes found for pattern 'npm run server'.
+2025-12-11 12:38:49,193 - DEBUG - [[StartAll]] No stale server processes found for pattern 'node ./src/server/server.js'.
+2025-12-11 12:38:49,193 - INFO - [[StartAll]] Launching Electron browser placeholder before backend/server bootstrap.
+2025-12-11 12:38:49,193 - DEBUG - [[StartAll]] Host LD_LIBRARY_PATH before Electron launch: /home/user/.peakexpertweb/PeakExpert:/home/user/.peakexpertweb/PeakExpert/../PeakExpertNoGUI:
+2025-12-11 12:38:49,194 - DEBUG - [[StartAll]] Electron LD_LIBRARY_PATH cleared to avoid backend library conflicts (previous value: /home/user/.peakexpertweb/PeakExpert:/home/user/.peakexpertweb/PeakExpert/../PeakExpertNoGUI:).
+2025-12-11 12:38:49,194 - INFO - [[StartAll]] Starting Electron: 'npm run start_electron' in directory: /home/user/.peakexpertweb/Interface
+2025-12-11 12:38:49,195 - INFO - [[ProcessManager]] Process 4273 started. Command: npm run start_electron
+2025-12-11 12:38:49,196 - DEBUG - [[ProcessManager]] Process 4273 LD_LIBRARY_PATH=<unset>
+2025-12-11 12:38:49,196 - DEBUG - [[ProcessManager]] Process 4273 cwd=/home/user/.peakexpertweb/Interface
+2025-12-11 12:38:49,196 - INFO - [[StartAll]] Electron browser process spawned; continuing background service startup.
+2025-12-11 12:38:49,197 - DEBUG - [[LinuxRabbitMQRecovery]] Detected systemctl at: /usr/bin/systemctl
+2025-12-11 12:38:49,202 - INFO - [[RabbitMQRecovery]] RabbitMQ service is already running; checking availability.
+2025-12-11 12:38:49,202 - INFO - [[RabbitMQRecovery]] RabbitMQ is responding; no recovery needed.
+2025-12-11 12:38:49,211 - INFO - [[COMPortsLogger]] COM ports available before launching services: /dev/ttyS0
+2025-12-11 12:38:49,224 - INFO - [[StartAll]] Interface directory verified: /home/user/.peakexpertweb/Interface
+2025-12-11 12:38:49,224 - INFO - [[StartAll]] Starting HTTP server: 'npm run server' in directory: /home/user/.peakexpertweb/Interface
+2025-12-11 12:38:49,226 - INFO - [[ProcessManager]] Process 4283 started. Command: npm run server
+2025-12-11 12:38:49,226 - DEBUG - [[ProcessManager]] Process 4283 LD_LIBRARY_PATH=/home/user/.peakexpertweb/PeakExpert:/home/user/.peakexpertweb/PeakExpert/../PeakExpertNoGUI:
+2025-12-11 12:38:49,226 - DEBUG - [[ProcessManager]] Process 4283 cwd=/home/user/.peakexpertweb/Interface
+2025-12-11 12:38:49,227 - DEBUG - [[StartAll]] Server process context: pid=4283, user=user, status=running
+2025-12-11 12:38:49,238 - INFO - [[StartAll]] Identified Node.js server PID to track: 4283
+2025-12-11 12:38:49,238 - INFO - [[StartAll]] Waiting for HTTP server readiness at http://localhost:5000 before starting backend.
+2025-12-11 12:38:49,238 - INFO - [[ProcessManager]] Waiting for HTTP server at http://localhost:5000 to become available (timeout: 60s)...
+2025-12-11 12:38:49,240 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-12-11 12:38:49,241 - DEBUG - [[ProcessManager]] HTTP server at http://localhost:5000 not yet available, retrying...
+2025-12-11 12:38:49,456 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: > ПикЭксперт@0.29.15 start_electron
+2025-12-11 12:38:49,456 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: > electron .
+2025-12-11 12:38:49,472 - INFO - [[ProcessManager]] [PID 4283] npm run server: > ПикЭксперт@0.29.15 server
+2025-12-11 12:38:49,472 - INFO - [[ProcessManager]] [PID 4283] npm run server: > node ./dist/server.js
+2025-12-11 12:38:49,654 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gtk-WARNING **: 12:38:49.654: Theme parsing error: gtk.css:3916:13: Not using units is deprecated. Assuming 'px'.
+NoneType: None
+2025-12-11 12:38:49,663 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.663: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,664 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.663: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,665 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.664: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,670 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:38:49.668+03:00 [33mwarn[39m: Frontend version: 0.29.15
+2025-12-11 12:38:49,671 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.671: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,742 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-12-11 12:38:49,743 - DEBUG - [[ProcessManager]] HTTP server at http://localhost:5000 not yet available, retrying...
+2025-12-11 12:38:49,748 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:38:49.746+03:00 [33mwarn[39m: Queues deleted
+2025-12-11 12:38:49,750 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:38:49.750+03:00 [33mwarn[39m: Connected to RabbitMQ
+2025-12-11 12:38:49,771 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:38:49.771+03:00 [33mwarn[39m: Server is running on port 5000
+2025-12-11 12:38:49,777 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.776: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,791 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gtk-WARNING **: 12:38:49.791: Theme parsing error: gtk.css:3916:13: Not using units is deprecated. Assuming 'px'.
+NoneType: None
+2025-12-11 12:38:49,811 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.811: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,847 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:38:49.846: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:38:49,876 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: starting production mode
+2025-12-11 12:38:49,901 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: Server ready after 1 total attempt(s)
+2025-12-11 12:38:50,159 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: starting production mode
+2025-12-11 12:38:50,244 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2025-12-11 12:38:50,245 - DEBUG - http://localhost:5000 "HEAD / HTTP/1.1" 200 0
+2025-12-11 12:38:50,246 - INFO - [[ProcessManager]] HTTP server at http://localhost:5000 is available (status 200).
+2025-12-11 12:38:50,246 - INFO - [[StartAll]] HTTP server responded successfully; proceeding with backend launch.
+2025-12-11 12:38:50,246 - INFO - [[ProcessManager]] Starting PeakExpertNoGUI with no window.
+2025-12-11 12:38:50,248 - INFO - [[ProcessManager]] Process 4402 started. Command: /home/user/.peakexpertweb/PeakExpertNoGUI/PeakExpertNoGUI
+2025-12-11 12:38:50,249 - DEBUG - [[ProcessManager]] Process 4402 LD_LIBRARY_PATH=/home/user/.peakexpertweb/PeakExpert:/home/user/.peakexpertweb/PeakExpert/../PeakExpertNoGUI:
+2025-12-11 12:38:50,249 - DEBUG - [[ProcessManager]] Process 4402 cwd=/home/user/.peakexpertweb/PeakExpert
+2025-12-11 12:38:50,249 - INFO - [[StartAll]] Backend process spawned with PID 4402.
+2025-12-11 12:38:50,249 - DEBUG - [[StartAll]] Backend working directory set to /home/user/.peakexpertweb/PeakExpertNoGUI.
+2025-12-11 12:38:50,250 - DEBUG - [[StartAll]] Backend process context: user=user, status=running, uids=puids(real=1000, effective=1000, saved=1000), gids=pgids(real=1000, effective=1000, saved=1000)
+2025-12-11 12:38:50,250 - DEBUG - [[COMPortsLogger]] Waiting 3 seconds before logging COM ports for stage: after launching all processes
+2025-12-11 12:38:50,250 - INFO - [[StartAll]] All the processes started. Browser window stays open while services warm up.
+2025-12-11 12:38:50,258 - ERROR - [[ProcessManager]] [PID 4402] /home/user/.peakexpertweb/PeakExpertNoGUI/PeakExpertNoGUI: sudo: нет tty и не указана программа askpass
+NoneType: None
+2025-12-11 12:38:50,259 - ERROR - [[ProcessManager]] [PID 4402] /home/user/.peakexpertweb/PeakExpertNoGUI/PeakExpertNoGUI: [12:38:50] ERROR: WARNING: sudo tee failed, attempting direct write
+NoneType: None
+2025-12-11 12:38:50,259 - ERROR - [[ProcessManager]] [PID 4402] /home/user/.peakexpertweb/PeakExpertNoGUI/PeakExpertNoGUI: [12:38:50] ERROR: WARNING: Cannot set custom core_pattern - will use system default
+NoneType: None
+2025-12-11 12:38:50,444 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getTemplatesList for main_reqv
+2025-12-11 12:38:50,594 - INFO - [[ProcessManager]] [PID 4283] npm run server: empty resolver map, stopping consumer that was started for getTemplatesList, and main_reqv
+2025-12-11 12:38:50,694 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:38:50.693+03:00 [33mwarn[39m: Backend version: 0.35.01
+2025-12-11 12:38:50,712 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getAutosamplerProperties for autosampler_reqv
+2025-12-11 12:38:50,715 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getTemplatesList for main_reqv
+2025-12-11 12:38:50,791 - INFO - [[ProcessManager]] [PID 4283] npm run server: empty resolver map, stopping consumer that was started for getAutosamplerProperties, and autosampler_reqv
+2025-12-11 12:38:50,892 - INFO - [[ProcessManager]] [PID 4283] npm run server: empty resolver map, stopping consumer that was started for getTemplatesList, and main_reqv
+2025-12-11 12:38:50,921 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-11 12:38:51,094 - INFO - [[ProcessManager]] [PID 4283] npm run server: empty resolver map, stopping consumer that was started for getTemplateByName, and main_reqv
+2025-12-11 12:38:53,261 - INFO - [[COMPortsLogger]] COM ports available after launching all processes: /dev/ttyS0
+2025-12-11 12:38:55,255 - DEBUG - [[StartAll]] Backend process 4402 healthy after 5.0s.
+2025-12-11 12:39:35,763 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:39:35.763: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:39:38,657 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-11 12:39:38,790 - INFO - [[ProcessManager]] [PID 4283] npm run server: empty resolver map, stopping consumer that was started for getTemplateByName, and main_reqv
+2025-12-11 12:39:38,848 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:39:38.848: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:39:38,866 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:39:38.866: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:39:39,815 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:39:39.814: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:40:37,463 - ERROR - [[ProcessManager]] [PID 4273] npm run start_electron: (electron:4313): Gdk-WARNING **: 12:40:37.463: Cannot transform xsetting gtk-cursor-theme-size of type gchararray to type gint
+NoneType: None
+2025-12-11 12:40:45,819 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:40:45.818+03:00 [33mwarn[39m: Sending message to queue 'main_set' activated by POST /methods/saveTemplate: {"operation":"saveTemplate","options":{"autoMark":true,"autoSave":true,"calibrationsFolder":"%tГрадуировки","folder":"%t","minimalTime":2,"name":"%y%m%d_%H%M_%s","saveBackground":false},"optionsSp":{"autoSave":false,"folder":"%tСпектры","name":"Спектр_%c"},"chromaMiscData":{"averaging":1,"thermostatTemp":null,"isWritingBaseline":false},"detectorProgram":{"stepsData":[{"from":0,"to":60,"component":"ebaltika","lambda":250,"lambdaEx":270,"lambdaReg":300,"excitFilter":"","regFilter":"","sensitivity":"ultraLow"},{"from":60,"component":"baltika","to":120,"lambda":270,"lambdaEx":270,"lambdaReg":300,"sensitivity":"ultraLow"},{"from":120,"component":"altika","to":180,"lambda":270,"lambdaEx":270,"lambdaReg":300,"sensitivity":"ultraLow"}]},"passport":{"sampleName":"","extendedName":"","volume":0,"dilution":0,"columnNum":"","sorbent":"","particleSize":0,"diameter":0,"length":0,"precolumn":false,"eluentA":"","eluentB":"","flow":0,"pressure":0,"temperature":0,"comment":""},"pumpProgramData":{"pumpMode":"isocrat","isocratProgram":{"flowRate":200,"startFlowRate":1000,"startPressure":2,"conditioningTime":1,"isAutoFill":false,"isContinuousSupply":false,"startVolume":0,"isocratVolume":0,"gradientVolume":0,"fillFlowRate":0}},"name":"whee","sourceMethod":null,"type":"chroma","instrument":"SPhDetector2"}
+2025-12-11 12:40:45,898 - ERROR - [[ProcessManager]] [PID 4402] /home/user/.peakexpertweb/PeakExpertNoGUI/PeakExpertNoGUI: CRASH DETECTED
+NoneType: None
+2025-12-11 12:40:49,785 - INFO - [[ProcessManager]] [PID 4283] npm run server: pushedResolverFor getTemplateByName for main_reqv
+2025-12-11 12:40:52,013 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:40:52.012+03:00 [33mwarn[39m: Pending thermostat requests after idle timeout: 9a139202-2d4f-49ba-acef-79cc754df880
+2025-12-11 12:40:52,091 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:40:52.091+03:00 [33mwarn[39m: Pending detector requests after idle timeout: 22a4622a-2009-4d2c-9983-72aa8ebb0320
+2025-12-11 12:40:52,092 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T12:40:52.092+03:00 [33mwarn[39m: Pending pumps requests after idle timeout: 36ac26d5-07d1-4099-96d7-2e84510b7484
+2025-12-11 13:06:28,173 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: got closing
+2025-12-11 13:06:28,178 - INFO - [[ProcessManager]] [PID 4273] npm run start_electron: closed
+2025-12-11 13:06:28,251 - INFO - [[StartAll]] Electron browser process signaled exit; initiating shutdown sequence.
+2025-12-11 13:06:28,251 - INFO - [[StartAll]] Electron browser exited.
+2025-12-11 13:06:28,251 - INFO - [[StartAll]] Starting shutdown sequence for all managed processes.
+2025-12-11 13:06:28,251 - INFO - [[StartAll]] Terminating process tree (PID: 4273). Name: electron_browser
+2025-12-11 13:06:28,251 - INFO - [[ProcessManager]] Parent process 4273 not found.
+2025-12-11 13:06:28,251 - INFO - [[StartAll]] Terminating process tree (PID: 4283). Name: server_shell
+2025-12-11 13:06:28,255 - INFO - [[ProcessManager]] Terminating process tree for PID 4283:
+2025-12-11 13:06:28,255 - INFO - [[ProcessManager]] - node (PID: 4306)
+2025-12-11 13:06:28,255 - INFO - [[ProcessManager]] - npm run server (PID: 4283)
+2025-12-11 13:06:28,255 - WARNING - [[ProcessManager]] Failed to terminate PID 4306: [Errno 3] No such process
+2025-12-11 13:06:28,256 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.256+03:00 [33mwarn[39m: Server is shutting down...
+2025-12-11 13:06:28,256 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.256+03:00 [33mwarn[39m: Closed server
+2025-12-11 13:06:28,263 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.263+03:00 [33mwarn[39m: All channels closed
+2025-12-11 13:06:28,264 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.264+03:00 [33mwarn[39m: RabbitMQ connection closed
+2025-12-11 13:06:28,265 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.264+03:00 [33mwarn[39m: deleting
+2025-12-11 13:06:28,265 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.265+03:00 [31merror[39m: Error during shutdown: uploadDir is not defined
+2025-12-11 13:06:28,265 - INFO - [[ProcessManager]] [PID 4283] npm run server: 2025-12-11T13:06:28.265+03:00 [33mwarn[39m: Goodbye
+2025-12-11 13:06:28,282 - INFO - [[ProcessManager]] Process PID=4283 successfully terminated
+2025-12-11 13:06:28,282 - INFO - [[ProcessManager]] Process tree for PID 4283 terminated in 0.03 seconds.
+2025-12-11 13:06:28,282 - INFO - [[StartAll]] Terminating process tree (PID: 4402). Name: backend
+2025-12-11 13:06:28,286 - INFO - [[ProcessManager]] Terminating process tree for PID 4402:
+2025-12-11 13:06:28,286 - INFO - [[ProcessManager]] - PeakExpertNoGUI (PID: 4402)
+2025-12-11 13:06:28,286 - INFO - [[ProcessManager]] Process PID=4402 successfully terminated
+2025-12-11 13:06:28,286 - INFO - [[ProcessManager]] Process tree for PID 4402 terminated in 0.00 seconds.
+2025-12-11 13:06:28,287 - INFO - [[StartAll]] StartAll.py finished
+2025-12-11 13:06:28,287 - INFO - [[main]] Starting log collection on shutdown...

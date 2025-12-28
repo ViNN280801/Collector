@@ -1,0 +1,319 @@
+{
+  "collection_timestamp": "2025-12-11T13:06:28.393405",
+  "os": {
+    "system": "Linux",
+    "platform": "Linux-6.1.90-1-generic-x86_64-with-AstraLinux-1.7_x86-64-1.7_x86-64",
+    "release": "6.1.90-1-generic",
+    "version": "#astra3+ci20 SMP PREEMPT_DYNAMIC Mon Jul 22 14:15:46 UTC 2024",
+    "machine": "x86_64",
+    "processor": "",
+    "architecture": "64bit",
+    "os_pretty_name": "Astra Linux",
+    "os_name": "Astra Linux",
+    "os_id": "astra",
+    "os_id_like": "debian",
+    "os_ansi_color": "1;31",
+    "os_home_url": "https://astralinux.ru",
+    "os_support_url": "https://astralinux.ru/support",
+    "os_logo": "astra",
+    "os_version_id": "1.7_x86-64",
+    "os_version_codename": "1.7_x86-64",
+    "kernel_version": "6.1.90-1-generic",
+    "libc_version": "ldd (Debian GLIBC 2.28-10+deb10u3+ci202406111043+astra10) 2.28"
+  },
+  "cpu": {
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "max_frequency": 4700.0,
+    "min_frequency": 800.0,
+    "current_frequency": 814.3215,
+    "architecture": "x86_64",
+    "cpu_percent": 0.0,
+    "model": "Intel(R) Pentium(R) Gold G7400"
+  },
+  "ram": {
+    "total": 8088252416,
+    "available": 7027023872,
+    "used": 609243136,
+    "percent": 13.1
+  },
+  "disks": [
+    {
+      "device": "/dev/nvme0n1p2",
+      "mountpoint": "/",
+      "fstype": "ext4",
+      "total": 501386043392,
+      "used": 27650105344,
+      "free": 448191737856,
+      "percent": 5.8
+    },
+    {
+      "device": "/dev/nvme0n1p1",
+      "mountpoint": "/boot/efi",
+      "fstype": "vfat",
+      "total": 535805952,
+      "used": 446464,
+      "free": 535359488,
+      "percent": 0.1
+    }
+  ],
+  "python": {
+    "version": "3.7.3 (default, Sep 25 2024, 15:06:53) \n[GCC 8.3.0]",
+    "version_info": [
+      3,
+      7,
+      3,
+      "final",
+      0
+    ],
+    "executable": "/home/user/.peakexpertweb/PeakExpert/StartAll",
+    "platform": "linux"
+  },
+  "processes": [
+    {
+      "pid": 3614,
+      "name": "epmd",
+      "cmdline": [
+        "/usr/lib/erlang/erts-14.2.3/bin/epmd",
+        "-daemon"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 110592,
+        "vms": 4018176
+      },
+      "memory_percent": 0.0013673163782726339,
+      "create_time": "2025-12-11T12:30:32.600000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3648,
+      "name": "rabbitmq-server",
+      "cmdline": [
+        "/bin/sh",
+        "/usr/lib/rabbitmq/bin/rabbitmq-server"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 3391488,
+        "vms": 6971392
+      },
+      "memory_percent": 0.041931035600360766,
+      "create_time": "2025-12-11T12:30:32.750000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3664,
+      "name": "beam.smp",
+      "cmdline": [
+        "/usr/lib/erlang/erts-14.2.3/bin/beam.smp",
+        "-W",
+        "w",
+        "-MBas",
+        "ageffcbf",
+        "-MHas",
+        "ageffcbf",
+        "-MBlmbcs",
+        "512",
+        "-MHlmbcs",
+        "512",
+        "-MMmcs",
+        "30",
+        "-pc",
+        "unicode",
+        "-P",
+        "1048576",
+        "-t",
+        "5000000",
+        "-stbt",
+        "db",
+        "-zdbbl",
+        "128000",
+        "-sbwt",
+        "none",
+        "-sbwtdcpu",
+        "none",
+        "-sbwtdio",
+        "none",
+        "-B",
+        "i",
+        "--",
+        "-root",
+        "/usr/lib/erlang",
+        "-bindir",
+        "/usr/lib/erlang/erts-14.2.3/bin",
+        "-progname",
+        "erl",
+        "--",
+        "-home",
+        "/var/lib/rabbitmq",
+        "--",
+        "-pa",
+        "",
+        "-noshell",
+        "-noinput",
+        "-s",
+        "rabbit",
+        "boot",
+        "-boot",
+        "start_sasl",
+        "-syslog",
+        "logger",
+        "[]",
+        "-syslog",
+        "syslog_error_logger",
+        "false",
+        "-kernel",
+        "prevent_overlapping_partitions",
+        "false"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 114556928,
+        "vms": 2661937152
+      },
+      "memory_percent": 1.416337202501075,
+      "create_time": "2025-12-11T12:30:32.760000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3679,
+      "name": "erl_child_setup",
+      "cmdline": [
+        "erl_child_setup",
+        "1024"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 749568,
+        "vms": 2338816
+      },
+      "memory_percent": 0.009267366563847851,
+      "create_time": "2025-12-11T12:30:32.770000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3784,
+      "name": "memsup",
+      "cmdline": [
+        "/usr/lib/erlang/lib/os_mon-2.9.1/priv/bin/memsup"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 749568,
+        "vms": 2199552
+      },
+      "memory_percent": 0.009267366563847851,
+      "create_time": "2025-12-11T12:30:33.410000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3785,
+      "name": "cpu_sup",
+      "cmdline": [
+        "/usr/lib/erlang/lib/os_mon-2.9.1/priv/bin/cpu_sup"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 745472,
+        "vms": 2334720
+      },
+      "memory_percent": 0.00921672521650442,
+      "create_time": "2025-12-11T12:30:33.420000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3793,
+      "name": "inet_gethost",
+      "cmdline": [
+        "/usr/lib/erlang/erts-14.2.3/bin/inet_gethost",
+        "4"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 1044480,
+        "vms": 4009984
+      },
+      "memory_percent": 0.012913543572574876,
+      "create_time": "2025-12-11T12:30:33.870000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3794,
+      "name": "inet_gethost",
+      "cmdline": [
+        "/usr/lib/erlang/erts-14.2.3/bin/inet_gethost",
+        "4"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 1593344,
+        "vms": 4096000
+      },
+      "memory_percent": 0.019699484116594612,
+      "create_time": "2025-12-11T12:30:33.870000",
+      "username": "rabbitmq"
+    },
+    {
+      "pid": 3949,
+      "name": "fusermount",
+      "cmdline": [
+        "fusermount",
+        "-o",
+        "rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal",
+        "--",
+        "/run/user/1000/doc"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 1863680,
+        "vms": 2441216
+      },
+      "memory_percent": 0.02304181304126105,
+      "create_time": "2025-12-11T12:30:39.830000",
+      "username": "user"
+    },
+    {
+      "pid": 4260,
+      "name": "start_with_pkex",
+      "cmdline": [
+        "/bin/bash",
+        "/home/user/.peakexpertweb/PeakExpert/start_with_pkexec.sh"
+      ],
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 3219456,
+        "vms": 6750208
+      },
+      "memory_percent": 0.03980409901193667,
+      "create_time": "2025-12-11T12:38:48.740000",
+      "username": "user"
+    },
+    {
+      "pid": 4268,
+      "name": "StartAll",
+      "cmdline": [
+        "/home/user/.peakexpertweb/PeakExpert/StartAll"
+      ],
+      "status": "running",
+      "cpu_percent": 0.0,
+      "memory_info": {
+        "rss": 28565504,
+        "vms": 538664960
+      },
+      "memory_percent": 0.3531727563730869,
+      "create_time": "2025-12-11T12:38:48.770000",
+      "username": "user"
+    }
+  ]
+}

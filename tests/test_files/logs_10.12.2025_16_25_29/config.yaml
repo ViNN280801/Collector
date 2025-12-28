@@ -1,0 +1,69 @@
+logging:
+  enable: true
+  filename: startall.log
+  level: debug
+  format: '%(asctime)s - %(levelname)s - %(message)s'
+  filemode: w
+com:
+  delay: 3
+network:
+  base_port: 5000
+  url_prefix: 'http://localhost:'
+  url: http://localhost:5000
+rabbitmq:
+  availability:
+    host: 127.0.0.1
+    port: 5672
+    socket_timeout: 3.0
+    poll_interval: 1.0
+    poll_until: 90.0
+  service:
+    wait_timeout: 30.0
+    poll_interval: 1.0
+    stop_wait_timeout: 10.0
+    stop_poll_interval: 0.5
+    start_wait_timeout: 45.0
+    start_poll_interval: 1.0
+  windows:
+    service_name: RabbitMQ
+    erlang_processes:
+    - beam.smp
+    - erl.exe
+    - erlsrv.exe
+    - epmd.exe
+  linux:
+    service_name: rabbitmq-server
+    erlang_processes:
+    - beam.smp
+    - erl
+    - epmd
+procman:
+  wait_for_graceful_termination: 5
+  wait_for_force_termination: 3
+  wait_for_http_server: 60
+  poll_interval_http_server: 0.5
+log_collector:
+  enable: true
+  mode: move
+  saveStructure: false
+  saveDumps: true
+  gainPCInfo: true
+  needArchive: true
+  archive:
+    max_compression: true
+    multithreaded: true
+    thread_count: null
+  email:
+    enable: true
+    recipients: []
+    smtp:
+      server: email.lumex.ru
+      port: 587
+      use_tls: true
+      use_ssl: false
+      username: ''
+      password: ''
+      from_email: ''
+      timeout: 30
+    subject: PeakExpertWeb Logs Archive - {timestamp}
+    body: Please find attached the PeakExpertWeb logs archive from session {timestamp}.

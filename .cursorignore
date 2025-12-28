@@ -1,0 +1,21 @@
+# Popular IDE files
+.vs/
+.vscode/
+.idea/
+
+# Any Python virtual environment
+*venv*/
+
+# Python cache files
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+
+# Python egg files
+*.egg*/*
+
+# Profiling files
+*.prof
+
+# Logs from prod in test files
+tests/test_files/

@@ -1,0 +1,168 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "collector"
+version = "0.0.1"
+description = "Collector - universal file collector with supprot of CLI, REST API and GUI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Semykin Vladislav <vladislav_semykin01@mail.ru>" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: OS Independent",
+]
+# pip install -e . --> will be installed only main deps
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "pydantic-settings",
+  "typing-extensions",
+  "pyyaml",
+  "psutil",
+  "jsonschema",
+  "py7zr",
+  "pyjwt",
+]
+
+# pip install -e ".[dev,test,...]"
+# pip install -e "..." --upgrade --> will upgrade all the specified deps
+[project.optional-dependencies]
+dev = [
+  "black",
+  "flake8",
+  "flake8-pyproject",
+  "mypy",             # mypy src --config-file pyproject.toml
+  "pytest",
+  "pytest-cov",
+  "pytest-timeout",
+  "pyright",          # pyright src
+  "pyinstaller",
+  "httpx",
+  "types-jsonschema",
+  "types-pyYAML",
+]
+
+[project.scripts]
+log-collector-cli = "src.cli.main:main"
+log-collector-api = "src.api.main:main"
+log-collector-gui = "src.ui.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | venv37
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+  ".git",
+  "__pycache__",
+  ".venv*",
+  "venv*",
+  "build",
+  "dist",
+  "*.egg-info",
+  ".eggs",
+]
+# Examples how to suppress some linter W or E:
+# extend-ignore = ["E203", "W503", "E501"]
+# per-file-ignores = ["__init__.py:F401"]
+extend-ignore = [
+  "E203",
+  "W503",
+] # Conflict linter error between `black` and `flake8`. Official recommendations is to suppress it ->  https://github.com/psf/black/issues/315
+per-file-ignores = ["__init__.py:F401", "pc_info_collector.py:C901"]
+max-complexity = 20
+count = true
+statistics = true
+
+[tool.pytest.ini_options]
+# Pytest configuration for Universal Log Collector tests
+# How to run tests:
+#   1. Activate virtual environment: .\venv37\Scripts\Activate.ps1 (Windows) or source venv37/bin/activate (Linux)
+#   2. Run all tests: pytest
+#   3. Run specific test file: pytest tests/test_file_filter.py
+#   4. Run specific test: pytest tests/test_file_filter.py::test_match_regex
+#   5. Run with markers: pytest -m unit (only unit tests), pytest -m "not slow" (exclude slow tests)
+#   6. Run with verbose output: pytest -v
+#   7. Run with coverage: pytest --cov=src --cov-report=html
+#   8. Run only failed tests: pytest --lf
+#   9. Run tests in parallel: pytest -n auto (requires pytest-xdist)
+timeout = 60
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "--strict-markers --durations=10"
+log_cli_level = "WARNING"
+log_level = "WARNING"
+markers = [
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+  "integration: marks tests as integration tests",
+  "unit: marks tests as unit tests",
+  "exception_safety: marks tests as exception safety tests",
+  "security: marks tests as security tests",
+]
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+
+# Ignore missing stubs for setuptools (it's a build dependency)
+[[tool.mypy.overrides]]
+module = "setuptools"
+ignore_missing_imports = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+  "fastapi.*",
+  "uvicorn.*",
+  "pydantic.*",
+  "psutil.*",
+  "py7zr.*",
+  "PyJWT.*",
+  "jwt.*",
+]
+ignore_missing_imports = true
