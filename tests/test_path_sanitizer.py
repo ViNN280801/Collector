@@ -177,13 +177,14 @@ class TestResolvePath:
         result = resolve_path(base, relative_path)
 
         assert result is not None
-        # is_relative_to is available in Python 3.9+, use try/except for compatibility
+        # is_relative_to is available in Python 3.9+
+        # Mypy is configured for 3.9, but we test on 3.8, so this may be unused on some systems
         try:
             # Python 3.9+
-            is_relative = result.resolve().is_relative_to(base.resolve())
+            is_relative = result.resolve().is_relative_to(base.resolve())  # type: ignore[attr-defined]
             assert is_relative
         except AttributeError:
-            # Python 3.7-3.8 fallback
+            # Python 3.8 fallback: manually check if path is relative
             import os
 
             result_str = str(result.resolve())

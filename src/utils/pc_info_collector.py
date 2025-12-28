@@ -249,6 +249,10 @@ class PCInfoCollector:
             return info
 
         # Get Windows build number
+        # Note: winreg is Windows-only. On Linux, mypy reports attr-defined errors.
+        # On Windows, mypy recognizes attributes (no errors). type: ignore[attr-defined]
+        # suppresses errors on Linux. To avoid unused-ignore warnings on Windows,
+        # we use a pattern that mypy accepts but doesn't warn about.
         try:
             key = winreg.OpenKey(  # type: ignore[attr-defined]
                 winreg.HKEY_LOCAL_MACHINE,  # type: ignore[attr-defined]

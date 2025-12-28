@@ -167,6 +167,22 @@ module = [
 ]
 ignore_missing_imports = true
 
+[[tool.mypy.overrides]]
+module = "winreg"
+ignore_missing_imports = true
+
+# Per-file override: disable unused-ignore warnings for winreg attribute accesses
+# winreg is Windows-only: type ignores are needed on Linux but appear unused on Windows
+[[tool.mypy.overrides]]
+module = "src.utils.pc_info_collector"
+warn_unused_ignores = false
+
+# Per-file override: disable unused-ignore warnings for Path.is_relative_to
+# This method exists in 3.9+, ignore may appear unused on newer Python versions
+[[tool.mypy.overrides]]
+module = "tests.test_path_sanitizer"
+warn_unused_ignores = false
+
 [tool.pyright]
 # Pyright configuration for type checking
 pythonVersion = "3.8"
