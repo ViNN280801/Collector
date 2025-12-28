@@ -59,7 +59,21 @@ def validate_path_traversal(path: Path, base_dir: Path) -> bool:
 def resolve_path(base: Path, relative: str) -> Path:
     base_normalized = sanitize_path(str(base))
 
-    if os.path.isabs(relative):
+    # Check for absolute paths: both Windows-style (C:\, D:\) and Unix-style (/path)
+    # On Windows, str(Path("/etc/passwd")) becomes "\etc\passwd" (backslash), and
+    # os.path.isabs("\etc\passwd") returns False (not a valid Windows absolute path without drive letter).
+    # Python 3.13+ also changed os.path.isabs() behavior on Windows for forward slashes.
+    # So we explicitly check for:
+    # 1. os.path.isabs() - catches valid Windows absolute paths (C:\, D:\, etc.)
+    # 2. Starts with "/" - catches Unix-style absolute paths
+    # 3. Starts with "\" - catches Windows root-relative paths (from Unix paths converted on Windows)
+    # 4. Drive letter pattern (C:\, D:\) - extra safety check
+    if (
+        os.path.isabs(relative)
+        or relative.startswith("/")
+        or (len(relative) > 0 and relative[0] == "\\")  # Windows root-relative path like "\etc\passwd"
+        or (len(relative) >= 2 and relative[1] == ":" and relative[2:3] in ("\\", "/"))  # Windows drive letter
+    ):
         raise SecurityError(f"Absolute paths are not allowed: {relative}")
 
     # Detect backslash-based path traversal patterns (Windows-style) BEFORE Path operations
